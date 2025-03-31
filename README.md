@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
   <br />
     <a href="https://youtu.be/lEflo_sc82g?feature=shared" target="_blank">
       <img src="https://github.com/adrianhajdin/healthcare/assets/151519281/a7dd73b6-93de-484d-84e0-e7f4e299167b" alt="Project Banner">
@@ -1018,5 +1018,6 @@ And if you're hungry for more than just a course and want to understand how we l
 </a>
 
 #
-#   H e a l t h _ M a n a g e m e n t _ S y s t e m  
+#   H e a l t h _ M a n a g e m e n t _ S y s t e m 
  
+  -->

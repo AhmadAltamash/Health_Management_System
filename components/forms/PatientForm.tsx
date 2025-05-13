@@ -7,6 +7,7 @@ import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
 import CustomFormField from "../CustomFormField"
+import SubmitButton from "../SubmitButton"
 
 export enum FormFieldType {
     INPUT = 'input',
@@ -71,7 +72,7 @@ const PatientForm = () => {
             iconSrc="/assets/icons/user.svg"
             iconAlt="user"
         />
-        <Button type="submit">Submit</Button>
+        <SubmitButton isLoading={isLoading}/>
       </form>
     </Form>
   )

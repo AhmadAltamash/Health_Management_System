@@ -24,7 +24,7 @@ export enum FormFieldType {
  
 
  
-const PatientForm = () => {
+const RegisterForm = () => {
 
   const router = useRouter()
 
@@ -93,4 +93,4 @@ const PatientForm = () => {
   )
 }
 
-export default PatientForm
+export default RegisterForm

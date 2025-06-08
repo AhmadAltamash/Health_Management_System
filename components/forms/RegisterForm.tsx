@@ -180,7 +180,20 @@ const RegisterForm = ({ user }: { user: User}) => {
         </CustomFormField>            
 
         <div className="flex flex-col gap-6 xl:flex-row">
-
+            <CustomFormField 
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name="address"
+            label="Address"
+            placeholder="177A Bleecker Street, New York"
+            />
+            <CustomFormField 
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name="occupation"
+            label="Occupation"
+            placeholder="General Surgeon"
+            />
         </div>
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
       </form>

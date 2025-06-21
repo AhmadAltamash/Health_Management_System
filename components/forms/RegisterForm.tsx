@@ -192,7 +192,7 @@ const RegisterForm = ({ user }: { user: User}) => {
             control={form.control}
             name="occupation"
             label="Occupation"
-            placeholder="Geneal Surgeon"
+            placeholder="General Surgeon"
             />
         </div>
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>

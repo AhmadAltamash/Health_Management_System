@@ -181,18 +181,18 @@ const RegisterForm = ({ user }: { user: User}) => {
 
         <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField 
-            fieldType={FormFieldType.INPUT}
+            fieldType={FormFieldType.TEXTAREA}
             control={form.control}
-            name="address"
-            label="Address"
-            placeholder="177A Bleecker Street, New York"
+            name="allergies"
+            label="Allergies (if any)"
+            placeholder="Peanuts, Penicillin, Pollen"
             />
             <CustomFormField 
-            fieldType={FormFieldType.INPUT}
+            fieldType={FormFieldType.TEXTAREA}
             control={form.control}
-            name="occupation"
-            label="Occupation"
-            placeholder="General Surgeon"
+            name="currentMedication"
+            label="Current medication (if any)"
+            placeholder="Nicip Plus, Paracetamol 500gm, Ibuprofen 200gm"
             />
         </div>
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>

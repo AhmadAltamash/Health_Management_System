@@ -116,6 +116,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
             </FormControl>
         )
         case FormFieldType.CHECKBOX:
+        return (
         <FormControl>
           <div className="flex items-center gap-4">
             <Checkbox
@@ -124,10 +125,11 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
               onCheckedChange={field.onChange}
             />
             <label htmlFor={props.name} className="checkbox-label">
-
+              {props.label}
             </label>
           </div>
         </FormControl>
+        )
         case FormFieldType.SKELETON:
           return renderSkeleton ? renderSkeleton(field) : null
         default:

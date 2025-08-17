@@ -113,11 +113,15 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
                 </SelectContent>
               </Select>
             </FormControl>
-          )
+        )
+        case FormFieldType.CHECKBOX:
+        return (
+           
+        )
         case FormFieldType.SKELETON:
           return renderSkeleton ? renderSkeleton(field) : null
         default:
-          break;
+        break;
     }
 }
 

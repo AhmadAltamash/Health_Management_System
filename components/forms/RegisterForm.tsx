@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation"
 import { createUser } from "@/lib/actions/patient.actions"
 import PatientForm, { FormFieldType } from "./PatientForm"
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
-import { Doctors, GenderOptions, IdentificationTypes } from "@/constants"
+import { Doctors, GenderOptions, IdentificationTypes, PatientFormDefaultValues } from "@/constants"
 import { Label } from "../ui/label"
 import { SelectItem } from "../ui/select"
 import Image from "next/image"
@@ -27,6 +27,7 @@ const RegisterForm = ({ user }: { user: User}) => {
   const form = useForm<z.infer<typeof PatientFormValidation>>({
     resolver: zodResolver(PatientFormValidation),
     defaultValues: {
+        ...PatientFormDefaultValues,
       name: "",
       email: "",
       phone: "",

@@ -56,8 +56,10 @@ const RegisterForm = ({ user }: { user: User}) => {
             birthDate: new Date(values.birthDate),
             identificationDocument: formData,
         }
+        console.log(patientData)
 
         const patient = await registerPatient(patientData);
+        
 
     if(patient) router.push(`/patient/${user.$id}/new-appointment`)
     } catch (error) {

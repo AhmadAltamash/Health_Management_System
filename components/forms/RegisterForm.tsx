@@ -33,9 +33,14 @@ const RegisterForm = ({ user }: { user: User}) => {
       phone: "",
     },
   })
- 
+//  async function onSubmit(values: any) {
+//   console.log("🔥 onSubmit TRIGGERED WITH:", values);
+// }
+
   async function onSubmit(values: z.infer<typeof PatientFormValidation>) {
     setIsLoading(true);
+    
+
 
     let formData;
 
@@ -58,18 +63,24 @@ const RegisterForm = ({ user }: { user: User}) => {
         }
         console.log(patientData)
 
-        const patient = await registerPatient(patientData);
-        
+        const patient = await registerPatient(patientData as RegisterUserParams);
+        console.log("Submitting...", patientData);
 
-    if(patient) router.push(`/patient/${user.$id}/new-appointment`)
+        if(patient) router.push(`/patient/${user.$id}/new-appointment`)
     } catch (error) {
       console.log(error)
     }
   }
+  console.log("❌ FORM ERRORS:", form.formState.errors);
+
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12 flex-1">
+      <form onSubmit={(e) => {
+      e.preventDefault();
+      console.log("🔥 HTML FORM SUBMITTED");
+      form.handleSubmit(onSubmit)(e);
+    }} className="space-y-12 flex-1">
         <section className="space-y-4">
             <h1 className="header">Welcome 👋🏻</h1>
             <p className="text-dark-700">Let us know more about yourself</p>
